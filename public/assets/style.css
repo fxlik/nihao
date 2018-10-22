@@ -1,0 +1,26 @@
+.container{
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 45px 300px 100px 100px 45px;
+	grid-gap: 2px;
+}
+.menu{
+	background: teal;
+	grid-column: 1/5;
+}
+.sidebar{
+	background:#606;
+	grid-row-start: 2;
+	grid-row-end: 5;
+	grid-column-end: 1/2;
+}
+.content{
+	background:#0c0;
+	grid-column: 2/5;
+}
+.footer{
+	background: #f9f;
+	grid-column: 1/5;
+}
+#mapid { height: auto; }
