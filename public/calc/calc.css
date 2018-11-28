@@ -1,0 +1,14 @@
+/*
+...
+"JIKA SENYUMMU SAJA BISA
+MENCURI DETAK JANTUNGKU"
+-
+,------.   ,---.  ,--. ,---.    ,---.   
+|  .--. ' /  O  \ |  |'   .-'  /  O  \  
+|  '--'.'|  .-.  ||  |`.  `-. |  .-.  | 
+|  |\  \ |  | |  ||  |.-'    ||  | |  | 
+`--' '--'`--' `--'`--'`-----' `--' `--' 
+                                        
+*/
+
+body{margin:0}.container{display:grid;width:100%;grid-template-columns:repeat(2,1fr);grid-gap:2px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif}.header{margin:8px;background:transparent;grid-column:1/3}.menu{background:#e9e9e9;margin:0;grid-column:1/3;display:grid;grid-template-columns:repeat(5,1fr);width:100%;overflow:hidden;position:fixed;bottom:0;width:100%}.menu a{float:left;display:block;color:#444749;text-align:center;padding:7px;text-decoration:none;font-size:20px}.menu a:hover{background:#f1f1f1;color:#000}.menu a:active{background-color:#4CAF50;color:#fff}.yuvia{margin:8px;grid-column:1/3}input{width:50px;height:25px;border-radius:5px;font-size:16px}.btn-operator{width:42px;height:30px;font-size:18px;text-align:center; border-radius:5px;}

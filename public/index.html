@@ -1,28 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>你好</title>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/style.css">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-	crossorigin=""/>
-	<!-- Make sure you put this AFTER Leaflet's CSS -->
-	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-	integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-	crossorigin=""></script> 
-</head>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Felik</title>
+	<link rel="manifest" href="/manifest.json">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	  rel="stylesheet">
+	<style>
+		body{
+			margin: 0;
+		}
 
+		.container{
+			display: grid;
+			margin-left: 6px;
+			margin-right: 6px; 
+			height: 100%;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 2px;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+		}
+		.header{
+			background: transparent;
+			margin:8px;
+			grid-column: 1/3; 
+		}
+		.content{
+			border-radius: 10px;
+			grid-column: 1/3;
+			margin-left: 2px;
+			margin-right: 2px;
+			margin-bottom: 8px;
+			/* background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);; */
+		}
+		.bigfoot{
+			display: grid;
+			width: 100%;
+			/* height: 80px; */
+			grid-template-columns:20% 50% 30%;
+			margin-bottom: 10px;
+			border-radius: 10px;
+			background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+			grid-column: 1/3;
+		}
+		.menu{
+			background: rgb(233, 233, 233);
+			margin: 0;
+			grid-column: 1/3;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			width: 100%;
+			overflow: hidden;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+		.menu a {
+			float: left;
+			display: block;
+			color: #444749;
+			text-align: center;
+			padding: 7px 7px;
+			text-decoration: none;
+			font-size: 20px;
+		}
+		.menu a:hover {
+			background: #f1f1f1;
+			color: black;
+		}
+		.menu a:active {
+			background: #4CAF50;
+			color: white;
+		}
+
+		.card {
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			transition: 0.3s;
+			width: 100%;
+			border-radius: 10px;
+
+		}
+
+		.card:hover {
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+			border-radius: 10px;
+
+		}
+
+		.isi-card {
+			padding: 2px 16px;
+		}
+	</style>
+</head>
 <body>
 	<div class="container">
-		<div class="menu">Menu</div>
-		<div class="sidebar">sideBar</div>
-		<div class="content" id="mapid"></div>
-		<div class="content">Content2</div>
-		<div class="content">Content3</div>
-		<div class="footer">Footer</div>
+		<div class="header">
+			<h2 style="font-style:bold;">Felik</h2>
+			<div style="background: rgba(235, 235, 233, 0.342); border-radius:10px;">
+				<!-- <p id="dateLoc" style="text-align:center; font-size:20px;">aaaa</p> -->
+			</div>
+		</div>
+
+		<div class="bigfoot" >
+			<div class="b1" style="margin-left: 8px; display: flex; align-items: center;">
+				<p> <i class="material-icons lg" style="font-size: 45px; color: rgb(226, 117, 15)">wb_sunny</i> </p>
+			</div>
+			<div class="b2" style="">
+				<p style="">30&#176;C di Pontianak</p>
+				<p style="color:rgb(80, 79, 79); font-size: 15px;">Selasa, 7 Januari 2019</p>
+			</div>
+			<div class="b3">
+				<p>30&#176;C / 23&#176;C</p>
+				<p style="color:rgb(80, 79, 79); font-size: 15px;">40%</p>
+			</div>
+		</div>
+		<!-- sticky widget setenghah -->
+		<div class="content" onclick="location.href='/css-grid';">
+			<div class="card">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkM3b0sW_kOapkEuA1z7stAHVc8MYoXu4QoPFUbcD_W_887Z8s" alt="Avatar" style="width:100%">
+				<div class="isi-card">
+					<h4><b>Basic CSS Grid</b></h4> 
+					<!-- <p>Architect & Engineer</p>  -->
+				</div>
+			</div>
+		</div>
+		<div class="content" onclick="location.href='/calc';">
+			<div class="card">
+				<img src="assets/calc2.png" alt="Avatar" style="width:100%">
+				<div class="isi-card">
+					<h4><b>A Simple Calculator</b></h4> 
+					<!-- <p>Architect & Engineer</p>  -->
+				</div>
+			</div>
+		</div>
+		<div class="content" onclick="location.href='/warungs';">
+			<div class="card" >
+				<img src="assets/peta.png" alt="Avatar" style="width:100%">
+				<div class="isi-card">
+					<h4><b>Peta Warungs</b></h4> 
+					<!-- <p>Architect & Engineer</p>  -->
+				</div>
+			</div>
+		</div>
+		<div class="spacing" style="margin-top:50px;">
+			<!-- wkwkwkwkwk -->
+		</div>
+		<!-- full widget -->
+	</div>
+	<div class="menu" id="menu">
+		<a class="active" href="/"><i class="material-icons">home</i></a>
+		<a href="/warungs"><i class="material-icons">restaurant</i></a>
+		<a href="/calc"><i class="material-icons">functions</i></a>
+		<a href="#m4"><i class="material-icons">face</i></a>
+		<a href="#m4"><i class="material-icons">nature_people</i></a>
 	</div>
 
-	<script src="assets/maps.js"></script>
+	<script type="text/javascript">
+	var sekarang = new Date();
+	</script>
+	<script>
+		if('serviceWorker' in navigator) {
+			window.addEventListener('load', function(){
+				navigator.serviceWorker.register('sw.js')
+				.then(reg=> console.log('Service Worker registered', reg))
+				.catch(err=> console.log('Service worker failed to registered', err));
+			});
+		}
+	</script>
 </body>
 </html>

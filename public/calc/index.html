@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Felik</title>
+    
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	  rel="stylesheet">
+    
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h2 style="font-style:bold;">Felik</h2>
+			<div style="background: rgba(235, 235, 233, 0.342); border-radius:10px;">
+				<p id="dateLoc" style="text-align:center; font-size:20px;">Calc</p>
+			</div>
+		</div>
+
+        <div class="yuvia">
+            <input type="number" name="angka1" id="angka1" >
+            <label style="font-size:16px;" id="opss"></label>
+            <input type="number" name="angka2" id="angka2" >
+            =
+            <input style="width: 70px;" type="number" name="hasil" id="hasil" readonly>
+            <div style="margin-top:4px;">
+                <button style="background:rgb(209, 105, 105); width: 49px; margin-right: 6px;" class="btn-operator" id="clear">C</button>
+                <button class="btn-operator" id="tambah">+</button>
+                <button class="btn-operator" id="kali"><b>*</b></button>
+                <button class="btn-operator" id="kurang">-</button>
+                <button class="btn-operator" id="bagi">/</button>
+            </div>
+        </div>
+		<div class="menu">
+			<!-- <div></div> -->
+			<a href="/"><i class="material-icons">home</i></a>
+			<a class="visited" href="/warungs"><i class="material-icons">restaurant</i></a>
+			<a href="/calc"><i class="material-icons">functions</i></a>
+			<a href="#m4"><i class="material-icons">face</i></a>
+			<a href="#m4"><i class="material-icons">nature_people</i></a>
+			<!-- <div></div> -->
+		</div>
+
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>

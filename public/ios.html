@@ -6,11 +6,15 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Felik</title>
 	<style>
+		body{
+			margin: 0
+		}
+
 		.container{
 			display: grid;
 			height: 100%;
 			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 4px;
+			grid-gap: 2px;
 		}
 		.header{
 			background: transparent;
@@ -18,10 +22,13 @@
 		}
 		.content{
 			border-radius: 10px;
+			margin-left: 2px;
+			margin-right: 2px;
 			background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);;
 		}
 		.bigfoot{
 			border-radius: 10px;
+			margin: 8px;
 			background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);;
 			grid-column: 1/3; 
 		}
